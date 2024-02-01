@@ -13,7 +13,8 @@ const getRooms = async (searchParams: string) => {
     const res = await fetch(`${process.env.API_URL}/api/rooms?${queryString}`, {
       next: {
         tags: ["RoomDetails"]
-      }
+      },
+      cache: 'no-store'
     });
     const data = await res.json();
     return data;
