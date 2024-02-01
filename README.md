@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BookMe: A room booking full-stack web application using React (Next.js)
 
-## Getting Started
+## Project Overview
+This application uses React library and Next.js framework to build a web application for renting and booking hotel rooms or homestays. MongoDB is used for data storage and Stripe is used for payment. 
+The application is deployed on vercel: [https://bookme-orcin.vercel.app](https://bookme-orcin.vercel.app)
 
-First, run the development server:
+## Technologies
+- React
+- Next.js
+- Redux for state management
+- Node.js
+- MongoDB for data storage
+- NextAuth.js for authentication
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### User Authentication
+Users are required to create an account and sign in in order to book rooms. Users are not required to sign in to view rooms or check room availability. If users forget their password, an email is sent to users' email address with a link to update their password. 
+![Login image](login-1.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Room Listings
+All rooms are displayed on the homepage for all users. Users can click on a room to view room details such as location (with map), room details and amenities, room availability displayed on a calendar, and room reviews and ratings.
+![Room listing image](room_listing-1.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Booking Functionalities
+Afer users are successfully authenticated, users can book rooms on a first-come-first-served basis. Stripe is integrated to handle user payments. 
+![Room details image](room_detail.png)
+![Stripe payment image](stripe_payment.png)
 
-## Learn More
+### User Dashboard
+Users can see and update their account details including name, email, avatar, password. Users can see a list of their successful bookings and download an invoice for each booking. 
+![User profile image](user_profile.png)
+![User bookings image](user_bookings.png)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Admin Dashboard
+Only admins have access to the admin dashboard, where they can view/update/delete rooms, bookings, and user information. 
+Admins can view or delete room reviews. Admins also have access to sales reports.
+![Admin dashboard image](admin_dashboard.png)
