@@ -27,6 +27,7 @@ const RoomDetails = ({ data }: Props) => {
       const coordinates = room?.location?.coordinates;
       console.log(coordinates);
       console.log(mapboxgl.accessToken);
+      console.log(process.env.MAPBOX_ACCESS_TOKEN);
       const map = new mapboxgl.Map({
         container: 'room-map',
         style: 'mapbox://styles/mapbox/streets-v11',
