@@ -17,17 +17,15 @@ interface Props {
   }
 }
 
-
+mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
 const RoomDetails = ({ data }: Props) => {
   const { room } = data;
-  mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN;
+  
   useEffect(() => {
     const setMap = async () => {
       const coordinates = room?.location?.coordinates;
-      console.log(coordinates);
-      console.log(mapboxgl.accessToken);
-      console.log(process.env.MAPBOX_ACCESS_TOKEN);
+
       const map = new mapboxgl.Map({
         container: 'room-map',
         style: 'mapbox://styles/mapbox/streets-v11',
