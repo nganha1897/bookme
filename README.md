@@ -22,7 +22,7 @@ Users are required to create an account and sign in in order to book rooms. User
 
 
 ### Room Listings
-All rooms are displayed on the homepage for all users. Users can click on a room to view room details such as location (with map), room details and amenities, room availability displayed on a calendar, and room reviews and ratings.
+All rooms are displayed on the homepage for all users. Users can click on a room to view room details such as location (with map), room details & amenities, room availability displayed on a calendar, and room reviews & ratings.
 
 
 ![Room listing image](public/images/readme_img/room_listing.png)
@@ -34,20 +34,22 @@ Afer users are successfully authenticated, users can book rooms on a first-come-
 
 ![Room details image](public/images/readme_img/room_detail.png)
 
+
 ![Stripe payment image](public/images/readme_img/stripe_payment.png)
 
 
 ### User Dashboard
-Users can see and update their account details including name, email, avatar, password. Users can see a list of their successful bookings and download an invoice for each booking. 
+Users can see and update their account details including name, email, avatar, and password. Users can see a list of their successful bookings and download an invoice pdf for each booking. 
 
 
 ![User profile image](public/images/readme_img/user_profile.png)
+
 
 ![User bookings image](public/images/readme_img/user_bookings.png)
 
 
 ### Admin Dashboard
-Only admins have access to the admin dashboard, where they can view/update/delete rooms, bookings, and user information. 
+Only admins have access to the admin dashboard, where they can view/update/delete all rooms, bookings, and user information. 
 Admins can view or delete room reviews. Admins also have access to sales reports.
 
 
